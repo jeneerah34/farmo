@@ -26,18 +26,12 @@ Farmo is a smart agriculture project aimed at enhancing farming efficiency throu
 
 ---
 
-## 📸 Screenshots
-
-> Add some screenshots or GIFs of your UI, dashboard, or mobile app here  
-> Example: `images/dashboard.png`
-
----
 
 ## 🧑‍🌾 Usage
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/your-username/farmo.git
+   git clone https://github.com/your-jeneerah34/farmo.git
 🧠 Team & Credits
 Built by:
 
