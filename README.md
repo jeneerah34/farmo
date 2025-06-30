@@ -48,13 +48,3 @@ This project is open-source under the MIT License.
 
 
 ---
-
-### 📌 How to Add This:
-
-1. Open your project folder
-2. Create a new file: `README.md`
-3. Paste the above content and **customize the names, tools, features** as per your project
-
----
-
-Want me to generate this with **your name + teammates + specific techs used**? Just send me those details and I’ll tailor it instantly 🧠✅
