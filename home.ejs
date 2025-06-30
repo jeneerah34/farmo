@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/homeStyle.css">
+    <title>Home</title>
+</head>
+<body id="homeBody">
+    <header class="homeHeader">
+        <a href="#" class="logo">Farmo</a>
+        <nav class="navbar">
+            <ul class="sidebar">
+                <li> <a href="/home" class="element selected">Home</a></li>
+                <li><a href="/profile" class="element">Profile</a></li>
+                <li><a href="/orders" class="element">MyProducts</a></li>
+                <li><a href="/new" class="element">AddProduct</a></li>
+                <li><a href="/track" class="element">Trade</a></li>
+                <li><a href="/logout" class="element">LogOut</a></li>
+                <li><svg class="hidden" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            </ul>
+            <ul class="hiddenSidebar">
+                <li><svg class="closeIcon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <li> <a href="/home" class="element1 selected">Home</a></li>
+                <li><a href="/profile" class="element1">Profile</a></li>
+                <li><a href="/orders" class="element1">MyProducts</a></li>
+                <li><a href="/new" class="element1">AddProduct</a></li>
+                <li><a href="track" class="element1">Trade</a></li>
+                <li><a href="/logout" class="element1">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="displayImg">
+       <h3 class="content321">CONNECT BUYERS AND</h3>
+       <h2 class="content123">FARMERS</h2>
+    </div>
+    <h2 class="profileh2">Let Trade a Fresh Products</h2>
+    <div class="contianer" >
+        <% for(let user of userData) { %>
+            <% for(let p of user.product) { %>
+            <div class="e1" style=" background-image: url(<%=p.image%>);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;">
+                <div class="about">
+                    <div class="text">
+                <p class="productName"><%=p.Name%></p>
+                <p class="productPrice"> <%= p.min %> kg:<%=p.price%>/-</p>
+            </div>
+            
+            <div class="button5">
+                <button onclick="location.href='buy/<%=user._id%>/<%=p._id%>'">Buy</button>
+            </div>
+        </div>
+                
+            </div>
+            <% } %>
+        <% } %>
+
+    </div>
+<script src="/homeApp.js"></script>
+</body>
+</html>

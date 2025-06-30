@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>SignUp</title>
+</head>
+<body id="loginBody">
+    <div class="notification">
+        <p class="errorInfo">Invalid password</p>
+    </div>
+    <h1 id="loginH1">SignIn Page</h1>
+    <form class="loginform" action="/signUp" method="post">
+    <div class="loginPage">
+        <div class="loginImage">
+            <img  class="loginImg" src="/photos/user-interface.png" alt="">
+        </div>
+        <div class="loginInfo">
+            <div class="infoImage">
+                <img class="loginImg" src="photos/login.png" alt="">
+            </div>
+            <div class="signInRealInfo">
+                
+                <div class="label1">
+                    <div class="input">
+                        <img class="loginImg" src=/photos/1077114.png alt="">
+                        <input id="username" required name="username" type="text" class="inputs">
+                    </div>
+                </div>
+                <div class="label2">
+                    <div class="pass">
+                        <img class="loginImg" src="/photos/padlock.png" alt="">
+                        <input required id="pass1" name="pass1" type="password" class="inputs">
+                    
+                    </div>
+                    </div>
+                <div class="label3">
+                    <div class="pass2">
+                        <img class="loginImg" src="/photos/padlock.png" alt="">
+                        <input required id="pass2" name="pass2" type="password" class="inputs">
+
+                    </div>
+                </div>
+                <div class="loginButton">
+                <button class="SButton Login" type="button" onclick="location.href='/'">Login</button>
+                <button class="SButton">SignUp</button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+    <script src="/app.js"></script>
+
+</body>
+</html>

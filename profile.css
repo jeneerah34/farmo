@@ -1,0 +1,311 @@
+body{
+    background:#eeeee4;
+    margin:none;
+    /*
+     background-repeat: no-repeat;
+    background-size: cover; */
+    min-height: 100vh;
+}
+
+.homeHeader{
+    margin-top: 1%;
+    width:100%;
+    height:5vh;
+    background-color: rgba(50, 50, 50, 0.5);
+    display:grid;
+    grid-column: 20% 70%;
+    grid-template-rows: 5vh;
+    grid-auto-flow: column;
+    align-items: center;
+    position:sticky;
+    border-radius: 5px;
+    top:0;
+    left:0;
+    box-shadow: 0px 2px 4px white;
+}
+
+.sidebar{
+    display:flex;
+    padding-left:50px;
+    list-style: none;
+    justify-content: space-evenly;
+}
+.hiddenSidebar{
+    list-style: none;
+    position:fixed;
+    width:25%;
+    height:100vh;
+    background-color: rgba(50, 50, 50, 0.4);
+    backdrop-filter: blur(5px);
+    top:0;
+    right:0;
+    display:none;
+    flex-direction: column;
+    z-index: 99;
+    justify-content:space-evenly;
+    padding-bottom: 30%;
+    font-size: 24px;
+    transition: all 350ms;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 22px;
+    color:white;
+    padding:0 40px;
+}
+.element, .element1{
+    text-decoration: none;
+    font-size:18px;
+    color:white;
+    position:relative;
+    margin-right:10%;
+    opacity:0.5;
+    transition: all 350ms;
+}
+.element:hover , .element1:hover{
+    opacity:1;
+}
+.element::before{
+    content:"";
+    bottom:0;
+    left:0;
+    position:absolute;
+    width:0;
+    height:2px;
+    background: white;
+    border-radius: 40px;
+    transition: all 350ms; 
+}
+.displayImg{
+    width:100%;
+    height:70vh;
+    background-image: url("/photos/image1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    flex-direction: column;
+    display:flex;
+    justify-content: end;
+    animation: change 30s infinite ease-in-out; 
+    border-radius: 10px;
+}
+.element:hover::before{
+    width:100%;
+}
+.element.selected ,.element1.selected{
+    opacity:1;
+}
+.hidden{
+    display : none;
+}
+
+@keyframes change{
+    15%{
+        background-image: url("/photos/image2.jpg");
+    }
+    30%{
+        background-image: url("/photos/image4.jpg");
+    }
+    45%{
+        background-image: url("/photos/image3.jpg");
+    }
+    60%{
+        background-image: url("/photos/image5.jpg");
+    }
+    75%{
+        background-image: url("/photos/image4.jpg");
+    }
+    85%{
+        background-image: url("/photos/image7.jpg");
+    }
+    100%{
+        background-image: url("/photos/image1.jpg");
+    }
+
+}
+.content123, .content321{
+    color:white;
+    margin-left:40px;
+}
+.content321{
+    font-size: 2.5rem;
+    font-weight:300;
+    margin: 0 0 0 40px;
+}
+.content123{
+    font-size: 4rem;
+    margin: 0 0 40px 40px;
+    font-weight: 700;
+}
+@media(max-width: 800px){
+    .element{
+        display:none;
+    }
+    .hidden{
+        display:inline-block;
+    }
+    .content123{
+        font-size:3.5rem;
+    }
+    .content321{
+        font-size:2rem;
+    }
+}
+@media(max-width: 600px){
+    .content123{
+        font-size:3rem;
+    }
+    .content321{
+        font-size:1.5rem;
+    }
+    .hiddenSidebar{
+        width:30%;
+    }
+}
+@media(max-width: 450px){
+    .content123{
+        font-size:2rem;
+    }
+    .content321{
+        font-size:1rem;
+    }
+    .hiddenSidebar{
+        width:40%;
+    }
+}
+@media(max-width:300px){
+    .hiddenSidebar{
+        width:94%;
+    }
+}
+.profileContainer{
+    margin-top:30px;
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileInfo{
+    width:50%;
+    height:80%;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:30px;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.401);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+.profileInputs{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.profileInputs input{
+    width:70%;
+    height:55%;
+    position:relative;
+    border-radius: 4px;
+    border:none;
+    background:transparent;
+    font-size: 1.1rem;
+    outline:none;
+    border-bottom: 2px solid black;
+    transition: all 500ms;
+}
+
+.profileInputs input:hover{
+    background-position: right;
+    border-bottom: 2px solid white;
+}
+.profileInputs input:focus{
+    border-bottom:2px solid white;
+    box-shadow: 2px 2px 4px white;
+}
+.button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#profileButton{
+    border:none;
+    outline:none;
+    border:1px solid black;
+    padding:6px 20px;
+    color:white;
+    margin-right:40px;
+    margin-bottom:15px;
+    border-radius: 10px;
+    background-color: rgba(190, 45, 45, 0.8);
+    transition: all 350ms;
+}
+#profileButton:hover{
+    transform:translateY(-2px);
+    background-color:rgba(190, 45, 45, 0.93);
+}
+.profileh2{
+    text-align: center;
+    font-size: 2rem;
+    margin-top:60px;
+    margin-bottom:0px;
+
+}
+#address{
+    font-size: 1.1rem;
+}
+@media(max-width: 1200px){
+    .profileInfo{
+        width:65%;
+    }
+}
+@media(max-width: 950px){
+    .profileInfo{
+        font-size: 1.3rem;
+        width:80%;
+    }
+    #address{
+        font-size:1rem;
+    }
+}
+@media(max-width: 650px){
+    .profileInfo{
+        font-size: 1.1rem;
+    }
+    .profileInputs input{
+        font-size: 1rem;
+    }
+}
+@media(max-width:500px){
+    .profileInfo{
+        width:95%;
+        font-size:0.9rem;
+    }
+    .profileInputs input{
+        font-size:0.9rem;
+    }
+    .profileh2{
+        font-size: 1.5rem;
+    }
+    .profileInputs input:focus{
+        border-bottom:2px solid white;
+        box-shadow: 1px 1px 3px white;
+    }
+}
+#profileDetials{
+    display:grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    border-bottom:2px solid white;
+    transition: all 400ms;
+}
+#profileDetials:hover{
+    box-shadow: 2px 2px 3px black;
+    border-bottom:2px solid black;
+}
+#profileDetials label{
+    margin-left:30px;
+}
